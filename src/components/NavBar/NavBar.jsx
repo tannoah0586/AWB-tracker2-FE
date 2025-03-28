@@ -1,7 +1,11 @@
+import { Link } from 'react-router'
+
 const NavBar = () => {
     return (
         <nav>
-            <p>navbar contents</p>
+            <ul>
+                <li><Link to='/sign-up'>Sign Up</Link></li>
+            </ul>
         </nav>
     )
 
