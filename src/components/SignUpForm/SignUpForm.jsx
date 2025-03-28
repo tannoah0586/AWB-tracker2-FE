@@ -1,7 +1,6 @@
-// SignUpForm.jsx
-
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
+import { signUp } from '../../services/authService';
 
 const SignUpForm = () => {
   const navigate = useNavigate();
@@ -13,8 +12,7 @@ const SignUpForm = () => {
     passwordConf: '',
   });
 
-  const { username,email , password, passwordConf } = formData;
-
+  const { username, email, password, passwordConf } = formData;
   const handleChange = (evt) => {
     setMessage('');
     setFormData({ ...formData, [evt.target.name]: evt.target.value });
@@ -22,17 +20,25 @@ const SignUpForm = () => {
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
-    console.log(formData); // this line will print the form data to the console
-    
-    if (password !== passwordConf) {
+
+    if (password !== formData.passwordConf) {
         setMessage("Passwords do not match.");
         return;
     }
-    
+
+    try {
+        const newUser = await signUp({ username, email, password }); 
+            console.log('Signup successful:', newUser);
+            setMessage('Signup successful. Redirecting...');
+            navigate('/dashboard');
+    } catch (error) {
+        setMessage(error.message)
+    }
+
   };
 
   const isFormInvalid = () => {
-    return !(username && password && password === passwordConf);
+    return !(username && password && password === formData.passwordConf);
   };
 
   return (
