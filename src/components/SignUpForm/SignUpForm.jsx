@@ -1,9 +1,16 @@
-import { useState } from 'react';
+import { useState,useContext } from 'react';
 import { useNavigate } from 'react-router';
 import { signUp } from '../../services/authService';
+import { UserContext } from '../../contexts/UserContext';
 
 const SignUpForm = () => {
   const navigate = useNavigate();
+  // Pass the UserContext object to the useContext hook to access:
+  // - The user state (which we're not using here).
+  // - The setUser function to update the user state (which we are using).
+  // Destructure the object returned by the useContext hook for easy access
+  // to the data we added to the context with familiar names.
+  const { setUser } = useContext(UserContext);
   const [message, setMessage] = useState('');
   const [formData, setFormData] = useState({
     username: '',
@@ -30,6 +37,7 @@ const SignUpForm = () => {
         const newUser = await signUp({ username, email, password }); 
             console.log('Signup successful:', newUser);
             setMessage('Signup successful. Redirecting...');
+            setUser(newUser);
             navigate('/dashboard');
     } catch (error) {
         setMessage(error.message)
