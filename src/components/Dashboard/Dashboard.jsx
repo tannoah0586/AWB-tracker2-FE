@@ -1,8 +1,22 @@
 import { UserContext } from "../../contexts/UserContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+
+import * as userService from '../../services/userService';
 
 const Dashboard = () => {
     const { user } = useContext(UserContext);
+
+    useEffect(()=>{
+        const fetchUsers = async()=>{
+            try {
+                const fetchedUsers = await userService.index();
+                
+            } catch (err) {
+                console.log(err)
+            }
+        }
+        if (user) fetchUsers();
+    }, [user]);
 
   return (
     <main>
