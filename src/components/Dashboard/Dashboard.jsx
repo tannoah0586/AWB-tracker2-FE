@@ -1,7 +1,7 @@
 import { UserContext } from "../../contexts/UserContext";
 import { useContext } from "react";
 
-const dashboard = () => {
+const Dashboard = () => {
     const { user } = useContext(UserContext);
 
   return (

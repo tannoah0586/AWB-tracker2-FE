@@ -6,6 +6,7 @@ import SignInForm from './components/SignInForm/SignInForm';
 import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import { UserContext } from './contexts/UserContext';
+import { useContext } from 'react';
 
 const App = () => {
       const { user } = useContext(UserContext);
