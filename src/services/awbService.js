@@ -21,6 +21,20 @@ const index = async (page = 1, limit = 10, filters = {}) => {
     }
 };
 
+const getAwbById = async (awbId) =>{
+    try {
+        const res = await fetch(`${BASE_URL}/${awbId}`);
+        if(!res.ok) {
+            throw new Error('Failed to fetch AWB');
+        }
+        return res.json();
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+};
+
 export {
     index,
+    getAwbById,
 };

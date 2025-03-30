@@ -7,6 +7,7 @@ import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import { UserContext } from './contexts/UserContext';
 import { useContext } from 'react';
+import AWBDetail from './components/AWBDetail/AWBDetail';
 
 const App = () => {
       const { user } = useContext(UserContext);
@@ -17,6 +18,7 @@ const App = () => {
       {/* Add the Routes component to wrap our individual routes*/}
       <Routes>
         <Route path='/' element={user ? <Dashboard /> : <Landing />} />
+        <Route path='/awb/:awbId' element={<AWBDetail/>} />
         <Route path='/sign-up' element={<SignUpForm />} />
         <Route path='/sign-in' element={<SignInForm />} />
       </Routes>

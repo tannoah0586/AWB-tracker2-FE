@@ -1,6 +1,7 @@
 import { UserContext } from "../../contexts/UserContext";
 import { useContext, useEffect, useState } from "react";
 import * as awbService from '../../services/awbService';
+import { Link } from 'react-router-dom';
 
 const Dashboard = () => {
     const { user } = useContext(UserContext);
@@ -95,7 +96,9 @@ const Dashboard = () => {
                 <ul>
                     {awbs.map((awb) => (
                         <li key={awb._id}>
+                            <Link to={`/awb/${awb._id}`}>
                             {awb["HAWB/HBL"]} - {awb["Departure Port"]} 
+                            </Link>
                         </li>
                     ))}
                 </ul>
