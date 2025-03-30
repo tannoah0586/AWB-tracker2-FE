@@ -10,6 +10,9 @@ const Dashboard = () => {
     const [totalPages, setTotalPages] = useState(1);
     const [filters, setFilters] = useState({
         "Departure Port": "",
+        "Transport Mode": "",
+        "Departure Country Name":"",
+        "Carrier":"",
         "Proof Of Delivery (POD)": "",
     });
 
@@ -44,6 +47,12 @@ const Dashboard = () => {
 
             {/* Filters */}
             <div>
+                <select name="Departure Country Name" onChange={handleFilterChange}>
+                    <option value="">All Departure Countries</option>
+                    <option value="CHINA">China</option>
+                    <option value="INDIA">India</option>
+                    <option value="USA">USA</option>
+                </select>
                 <select name="Departure Port" onChange={handleFilterChange}>
                     <option value="">All Departure Ports</option>
                     <option value="BLR">Bangalore</option>
@@ -53,9 +62,31 @@ const Dashboard = () => {
                     <option value="MKE">MILWAUKEE</option>
                 </select>
 
+                <select name="Transport Mode" onChange={handleFilterChange}>
+                    <option value="">All Transport Mode</option>
+                    <option value="Air">Air</option>
+                    <option value="Ocean">Ocean</option>
+                </select>
+
+                <select name="Carrier" onChange={handleFilterChange}>
+                    <option value="">All Carriers</option>
+                    <option value="Thai Airways International Public">Thai Airways International Public</option>
+                    <option value="Singapore Airlines Limited">Singapore Airlines Limited</option>
+                    <option value="Air India Limited">Air India Limited</option>
+                    <option value="China Airlines Ltd.">China Airlines Ltd.</option>
+                    <option value="SriLankan Airlines Ltd">SriLankan Airlines Ltd</option>
+                    <option value="Eva Airways Corporation">Eva Airways Corporation</option>
+                    <option value="KOREA MARINE TRANSPORT CO/E C TEAM">KOREA MARINE TRANSPORT</option>
+                </select>
+
+                <select name="Destination Country" onChange={handleFilterChange}>
+                    <option value="">All Destination Countries</option>
+                    <option value="SIN">Singapore</option>
+                </select>
+
                 <select name="Proof Of Delivery (POD)" onChange={handleFilterChange}>
-                    <option value="">All POD Status</option>
-                    <option value="empty">Empty</option>
+                    <option value="">All POD Status (At Risk)</option>
+                    <option value="empty">Not delivered</option>
                 </select>
             </div>
 
@@ -64,7 +95,7 @@ const Dashboard = () => {
                 <ul>
                     {awbs.map((awb) => (
                         <li key={awb._id}>
-                            {awb["HAWB/HBL"]} - {awb["Departure Port"]} - {awb["Proof Of Delivery (POD)"]}
+                            {awb["HAWB/HBL"]} - {awb["Departure Port"]} 
                         </li>
                     ))}
                 </ul>
