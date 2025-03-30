@@ -53,6 +53,7 @@ const Dashboard = () => {
                     <option value="CHINA">China</option>
                     <option value="INDIA">India</option>
                     <option value="USA">USA</option>
+                    <option value="AUSTRALIA">Australia</option>
                 </select>
                 <select name="Departure Port" onChange={handleFilterChange}>
                     <option value="">All Departure Ports</option>
