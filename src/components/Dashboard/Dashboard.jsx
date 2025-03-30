@@ -59,7 +59,7 @@ const Dashboard = () => {
                     <option value="BLR">Bangalore</option>
                     <option value="BOM">Bombay</option>
                     <option value="DEL">Delhi</option>
-                    <option value="COK">Calcutta</option>
+                    <option value="COK">COCHIN</option>
                     <option value="MKE">MILWAUKEE</option>
                 </select>
 
