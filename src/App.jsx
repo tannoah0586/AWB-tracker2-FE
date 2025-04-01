@@ -12,6 +12,7 @@ import AWBDetail from './components/AWBDetail/AWBDetail';
 const App = () => {
       const { user } = useContext(UserContext);
 
+      
   return (
     <>
       <NavBar />

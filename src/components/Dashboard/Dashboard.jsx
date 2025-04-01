@@ -2,6 +2,7 @@ import { UserContext } from "../../contexts/UserContext";
 import { useContext, useEffect, useState } from "react";
 import * as awbService from '../../services/awbService';
 import { Link } from 'react-router-dom';
+import AwbShortlist from "../AwbShortlist/AwbShortlist";
 
 const Dashboard = () => {
     const { user } = useContext(UserContext);
@@ -16,6 +17,7 @@ const Dashboard = () => {
         "Carrier":"",
         "Proof Of Delivery (POD)": "",
     });
+    const [selectedAwbs,setSelectedAwbs] = useState([]);
 
     useEffect(() => {
         const fetchAwbs = async () => {
@@ -40,6 +42,30 @@ const Dashboard = () => {
     const handleFilterChange = (e) => {
         setFilters({ ...filters, [e.target.name]: e.target.value });
     };
+
+    const handleCheckboxChange = (awbId,isChecked) => {
+        if (isChecked) {
+            setSelectedAwbs([...selectedAwbs,awbId]);
+        } else {
+            setSelectedAwbs(selectedAwbs.filter((id) => id!== awbId));
+        }
+    };
+
+    const refreshedAwbs = ()=> {
+        const fetchAwbs = async()=> {
+            try {
+                const fetchedAwbs = await awbService.index(page,limit,filters);
+                setAwbs(fetchedAwbs.awbs);
+                setTotalPages(fetchedAwbs.totalPages);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+        if (user) {
+            fetchAwbs();
+        }
+        setSelectedAwbs([]) //clear afterr refreshed
+    }
 
     return (
         <main>
@@ -100,6 +126,10 @@ const Dashboard = () => {
                             <Link to={`/awb/${awb._id}`}>
                             {awb["HAWB/HBL"]} - {awb["Departure Port"]} 
                             </Link>
+                            <input 
+                                type="checkbox"
+                                onChange={(e)=>handleCheckboxChange(awb._id,e.target.checked)}
+                            />  
                         </li>
                     ))}
                 </ul>
@@ -111,6 +141,8 @@ const Dashboard = () => {
                 <span>Page {page} of {totalPages}</span>
                 {page < totalPages && <button onClick={() => handlePageChange(page + 1)}>Next</button>}
             </div>
+            {/* AwbShortlist Component */}
+            <AwbShortlist selectedAwbs={selectedAwbs} onSaveSuccess={refreshedAwbs}/>
         </main>
     );
 };
