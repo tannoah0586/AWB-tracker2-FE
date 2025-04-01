@@ -70,6 +70,7 @@ const Dashboard = () => {
     return (
         <main>
             <h1>Welcome, {user.username}</h1>
+            <Link to="/shortlisted">View Your Saved AWBs</Link>
             <p>This is the dashboard page where you can see a list of AWBs.</p>
 
             {/* Filters */}

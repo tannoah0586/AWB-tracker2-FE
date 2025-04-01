@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import { UserContext } from './contexts/UserContext';
 import { useContext } from 'react';
 import AWBDetail from './components/AWBDetail/AWBDetail';
+import ShortlistedAwbs from './components/ShortlistedAwbs/ShortlistedAwbs';
 
 const App = () => {
       const { user } = useContext(UserContext);
@@ -22,6 +23,7 @@ const App = () => {
         <Route path='/awb/:awbId' element={<AWBDetail/>} />
         <Route path='/sign-up' element={<SignUpForm />} />
         <Route path='/sign-in' element={<SignInForm />} />
+        <Route path='/shortlisted' element= {<ShortlistedAwbs/>}/>
       </Routes>
     </>
   );
