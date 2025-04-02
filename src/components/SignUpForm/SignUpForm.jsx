@@ -38,7 +38,7 @@ const SignUpForm = () => {
             console.log('Signup successful:', newUser);
             setMessage('Signup successful. Redirecting...');
             setUser(newUser);
-            navigate('/dashboard');
+            navigate('/');
     } catch (error) {
         setMessage(error.message)
     }
@@ -99,7 +99,7 @@ const SignUpForm = () => {
           />
         </div>
         <div>
-          <button disabled={isFormInvalid()}>Sign Up</button>
+          <button>Sign Up</button>
           <button onClick={() => navigate('/')}>Cancel</button>
         </div>
       </form>

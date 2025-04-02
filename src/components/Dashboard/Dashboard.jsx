@@ -16,6 +16,8 @@ const Dashboard = () => {
         "Departure Country Name":"",
         "Carrier":"",
         "Proof Of Delivery (POD)": "",
+        "Service Type": "",
+        "Project ID": "",
     });
     const [selectedAwbs,setSelectedAwbs] = useState([]);
 
@@ -87,8 +89,8 @@ const Dashboard = () => {
                     <option value="BLR">Bangalore</option>
                     <option value="BOM">Bombay</option>
                     <option value="DEL">Delhi</option>
-                    <option value="COK">COCHIN</option>
-                    <option value="MKE">MILWAUKEE</option>
+                    <option value="COK">Cochin</option>
+                    <option value="MKE">Milwakee</option>
                 </select>
 
                 <select name="Transport Mode" onChange={handleFilterChange}>
@@ -116,6 +118,19 @@ const Dashboard = () => {
                 <select name="Proof Of Delivery (POD)" onChange={handleFilterChange}>
                     <option value="">All POD Status (At Risk)</option>
                     <option value="empty">Not delivered</option>
+                </select>
+
+                <select name="Service Type" onChange={handleFilterChange}>
+                    <option value ="">All Service Types</option>
+                    <option value ="DD">Door to Door</option>
+                    <option value = "DA">Door to Airport</option>
+                    <option value="AD">Airport to Door</option>
+                    <option value="AA">Airport to Airport</option>
+                </select>
+
+                <select name="Project ID" onChange={handleFilterChange}>
+                    <option value="">All Business Units</option>
+                    <option value="GEGSPO">GSPO</option>
                 </select>
             </div>
 
