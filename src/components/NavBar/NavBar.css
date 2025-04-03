@@ -1,14 +1,13 @@
-/* navbar.css */
 
 nav {
-    position: fixed; /* Make the navbar fixed */
-    top: 0; /* Stick it to the top */
-    left: 0; /* Stick it to the left */
-    width: 100%; /* Make it span the entire width */
-    background-color: #f7fafc; /* light blue background */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: #f7fafc; 
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 100; /* Ensure it's above other elements */
+    z-index: 100; 
   }
   
   nav ul {
