@@ -2,8 +2,7 @@ body {
     background-color: #f5f0ff; /* Faint purple background for the entire page */
   }
   
-  .signup-form-container,
-  .signin-form-container {
+  .signup-form-container {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -19,21 +18,18 @@ body {
     background-color: white; /* Make the container white */
   }
   
-  .signup-form-title,
-  .signin-form-title {
+  .signup-form-title{
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #2d3748;
   }
   
-  .signup-form-message,
-  .signin-form-message {
+  .signup-form-message{
     color: #e53e3e; /* Red color for error messages */
     margin-bottom: 1rem;
   }
   
-  .signup-form,
-  .signin-form {
+  .signup-form {
     width: 100%;
   }
   
