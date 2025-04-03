@@ -1,4 +1,5 @@
 import React from 'react';
+import './AwbShortlist.css'
 
 function AwbShortlist({ selectedAwbs, onSaveSuccess }) {
   const handleSave = async () => {
@@ -39,7 +40,7 @@ function AwbShortlist({ selectedAwbs, onSaveSuccess }) {
 
   return (
     <div>
-      <button onClick={handleSave}>Save Selected AWBs</button>
+    <button onClick={handleSave}>Save Selected AWBs</button>
     </div>
   );
 }

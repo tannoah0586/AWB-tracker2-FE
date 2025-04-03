@@ -12,7 +12,7 @@
     top: 25px;
     left: 0;
     width: 100%;
-    background-color: pink;
+    background-color: #fce4ec;
     z-index: 1; /* Title on top */
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -43,7 +43,7 @@
     top: 130px; 
     left: 0;
     width: 100%;
-    background-color: pink;
+    background-color: #fce4ec;
     z-index: 10; 
     padding: 1rem 2rem;
     box-sizing: border-box;
@@ -89,8 +89,16 @@
 .dashboard-pagination {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
+    position: fixed; /* Lock it to the viewport */
+    bottom: 1rem; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust horizontal centering */
+    width: 60%; /* Adjust width */
+    margin: 0; /* Remove default margins */
+    padding: 0.5rem 0; /* Add padding for spacing */
+    background-color: #f5f0ff; /* Add background color */
+    border-top: 1px solid #eee; /* Add a border for separation */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .dashboard-button {

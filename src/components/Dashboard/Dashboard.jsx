@@ -85,7 +85,7 @@ const Dashboard = () => {
 
     return (
         <main className="dashboard-container">
-            <h3 className="dashboard-title">Hi, {user.username}, welcome to the automated control tower!</h3>
+            <h3 className="dashboard-title">Hi, {user.username}, select and save the waybills you want to monitor</h3>
 
             {/* Filters */}
             <div className="dashboard-filters">
