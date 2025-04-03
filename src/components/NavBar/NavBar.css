@@ -1,0 +1,46 @@
+/* navbar.css */
+
+nav {
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Stick it to the top */
+    left: 0; /* Stick it to the left */
+    width: 100%; /* Make it span the entire width */
+    background-color: #f7fafc; /* light blue background */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensure it's above other elements */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 1.5rem;
+  }
+  
+  nav li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #2d3748;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #edf2f7;
+  }
+  
+  nav a.active {
+    background-color: #dbeafe;
+  }

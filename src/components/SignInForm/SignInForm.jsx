@@ -1,11 +1,10 @@
 // src/components/SignInForm/SignInForm.jsx
 
 import { useState, useContext } from 'react';
-import { useNavigate } from 'react-router';
-
+import { useNavigate } from 'react-router-dom';
 import { signIn } from '../../services/authService';
-
 import { UserContext } from '../../contexts/UserContext';
+import './SignInForm.css'; // Import the CSS
 
 const SignInForm = () => {
   const navigate = useNavigate();
@@ -24,10 +23,7 @@ const SignInForm = () => {
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     try {
-      // This function doesn't exist yet, but we'll create it soon.
-      // It will cause an error right now
       const signedInUser = await signIn(formData);
-
       setUser(signedInUser);
       navigate('/');
     } catch (err) {
@@ -36,37 +32,45 @@ const SignInForm = () => {
   };
 
   return (
-    <main>
-      <h1>Sign In</h1>
-      <p>{message}</p>
-      <form autoComplete='off' onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor='email'>Username:</label>
+    <main className="signin-form-container">
+      <h1 className="signin-form-title">Sign In</h1>
+      <p className="signin-form-message">{message}</p>
+      <form autoComplete="off" onSubmit={handleSubmit} className="signin-form">
+        <div className="form-group">
+          <label htmlFor="username" className="form-label">
+            Username:
+          </label>
           <input
-            type='text'
-            autoComplete='off'
-            id='username'
+            type="text"
+            autoComplete="off"
+            id="username"
             value={formData.username}
-            name='username'
+            name="username"
             onChange={handleChange}
             required
+            className="form-input"
           />
         </div>
-        <div>
-          <label htmlFor='password'>Password:</label>
+        <div className="form-group">
+          <label htmlFor="password" className="form-label">
+            Password:
+          </label>
           <input
-            type='password'
-            autoComplete='off'
-            id='password'
+            type="password"
+            autoComplete="off"
+            id="password"
             value={formData.password}
-            name='password'
+            name="password"
             onChange={handleChange}
             required
+            className="form-input"
           />
         </div>
-        <div>
-          <button>Sign In</button>
-          <button onClick={() => navigate('/')}>Cancel</button>
+        <div className="form-buttons">
+          <button className="form-button submit-button">Sign In</button>
+          <button onClick={() => navigate('/')} className="form-button cancel-button">
+            Cancel
+          </button>
         </div>
       </form>
     </main>
@@ -74,4 +78,3 @@ const SignInForm = () => {
 };
 
 export default SignInForm;
-

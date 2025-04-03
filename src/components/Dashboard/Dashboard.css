@@ -1,0 +1,124 @@
+.dashboard-container {
+    padding: 2rem;
+    font-family: sans-serif;
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+    position: fixed;
+    top: 25px;
+    left: 0;
+    width: 100%;
+    background-color: pink;
+    z-index: 1; /* Title on top */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.dashboard-link {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.dashboard-link:hover {
+    text-decoration: underline;
+}
+
+.dashboard-description {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.dashboard-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    position: fixed;
+    top: 130px; 
+    left: 0;
+    width: 100%;
+    background-color: pink;
+    z-index: 10; 
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    min-height: 70px; /* Add minimum height for filters */
+}
+
+.dashboard-select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.dashboard-list {
+    list-style: none;
+    padding: 0.5;
+    margin-top: 170px;
+}
+
+.dashboard-list-item {
+    display: block;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.dashboard-awb-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.dashboard-awb-link:hover {
+    text-decoration: underline;
+}
+
+.dashboard-checkbox {
+    width: 1.2rem;
+    height: 1.2rem;
+    transform: scale(1.0);
+}
+
+.dashboard-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-button {
+    padding: 0.3rem 0.6rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    background-color: #f8f8f8;
+    cursor: pointer;
+    margin: 0 0.2rem;
+}
+
+.dashboard-button:hover {
+    background-color: #eee;
+}
+
+.dashboard-page-info {
+    margin: 0 0.5rem;
+}
+
+.dashboard-reset-button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.dashboard-reset-button:hover {
+    background-color: #e0e0e0;
+}

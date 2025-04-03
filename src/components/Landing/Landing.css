@@ -1,0 +1,155 @@
+main {
+    font-family: sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  section.bg-blue-100 {
+    background-color: #e6f4ff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  
+  section.bg-blue-100 div.max-w-4xl {
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  
+  section.bg-blue-100 h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  section.bg-blue-100 p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+  
+  section.bg-blue-100 div.flex {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  section.bg-blue-100 a.bg-blue-500 {
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
+  
+  section.bg-blue-100 a.bg-blue-500:hover {
+    background-color: #2563eb;
+  }
+  
+  section.bg-blue-100 a.bg-gray-200 {
+    background-color: #e5e7eb;
+    color: #374151;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+  }
+  
+  section.bg-blue-100 a.bg-gray-200:hover {
+    background-color: #d1d5db;
+  }
+  
+  section.py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  section.py-16 h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  
+  section.py-16 div.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  
+  @media (min-width: 768px) {
+    section.py-16 div.grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    section.py-16 div.grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  section.py-16 div.grid div {
+    padding: 1.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+  }
+  
+  section.py-16 div.grid h3 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  section.py-16 div.grid p {
+    font-size: 0.875rem;
+  }
+  
+  section.bg-gray-100 {
+    background-color: #f3f4f6;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  section.bg-gray-100 p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  
+  section.bg-gray-100 ul {
+    list-style: none;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+  
+  section.bg-gray-100 li {
+    margin-bottom: 0.5rem;
+  }
+  
+  section a.bg-green-500 {
+    background-color: #10b981;
+    color: white;
+    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    text-decoration: none;
+  }
+  
+  section a.bg-green-500:hover {
+    background-color: #059669;
+  }
