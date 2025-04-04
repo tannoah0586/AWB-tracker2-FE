@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Landing.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDatabase, faCheckCircle, faTasks, faEnvelope, faFilter } from '@fortawesome/free-solid-svg-icons';
 
 const Landing = () => {
   return (
@@ -26,30 +28,35 @@ const Landing = () => {
         <h2>How It Works</h2>
         <div className="grid">
           <div>
+            <FontAwesomeIcon icon={faDatabase} className="icon" />
             <h3>Simulated OTM Data & Lane Management</h3>
             <p>
               Import simulated OTM freight data and easily save your assigned lanes for focused tracking.
             </p>
           </div>
           <div>
+            <FontAwesomeIcon icon={faCheckCircle} className="icon" />
             <h3>Automated Risk Assessment</h3>
             <p>
               Our system automatically assesses the risk of each AWB, specifically monitoring the "Proof of Delivery" (POD) field.
             </p>
           </div>
           <div>
+            <FontAwesomeIcon icon={faTasks} className="icon" />
             <h3>Scheduled Tracking with Timeouts/Cron Jobs</h3>
             <p>
               AWB-Tracker2 uses scheduled tasks (timeouts or cron jobs) to periodically check the POD status of your saved freight.
             </p>
           </div>
           <div>
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />
             <h3>Real-Time Updates & Notifications</h3>
             <p>
               Receive immediate email notifications if the POD field remains empty, indicating a potential delivery risk.
             </p>
           </div>
           <div>
+            <FontAwesomeIcon icon={faFilter} className="icon" />
             <h3>Dashboard & Filtering</h3>
             <p>
               Utilize our comprehensive dashboard with advanced filtering options to monitor and manage your shipments efficiently.

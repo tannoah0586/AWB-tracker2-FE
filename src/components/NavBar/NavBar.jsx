@@ -1,9 +1,9 @@
-// src/components/NavBar/NavBar.jsx
-
 import { Link, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../contexts/UserContext';
-import './NavBar.css'; 
+import './NavBar.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons'; // Import the home icon
 
 const NavBar = () => {
     const { user, setUser } = useContext(UserContext);
@@ -33,7 +33,7 @@ const NavBar = () => {
                 <ul>
                     <li>
                         <Link to="/" className={location.pathname === '/' ? 'active' : ''}>
-                            Home
+                            <FontAwesomeIcon icon={faHome} className="home-icon" /> {/* Replace "Home" with the icon */}
                         </Link>
                     </li>
                     <li>

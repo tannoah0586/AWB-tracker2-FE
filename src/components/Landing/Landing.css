@@ -97,6 +97,10 @@ main {
   }
   
   section.py-16 div.grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 1.5rem;
     border: 1px solid #d1d5db;
     border-radius: 0.375rem;
@@ -152,4 +156,10 @@ main {
   
   section a.bg-green-500:hover {
     background-color: #059669;
+  }
+  
+  section.py-16 div.grid div .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #3b82f6;
   }
