@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f0ff; 
+    background-color: #f5f0ff;
   }
   
   .signin-form-container {
@@ -10,23 +10,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    max-width: 600px;
+    padding: 2.5rem;
+    max-width: 800px;
+    min-width: 500px;
+    width: 80%;
     border: 1px solid #e2e8f0;
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: white; /* Make the container white */
+    background-color: white;
   }
   
   .signin-form-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    margin-bottom: 1.25rem;
     color: #2d3748;
   }
   
   .signin-form-message {
-    color: #e53e3e; 
-    margin-bottom: 1rem;
+    color: #e53e3e;
+    margin-bottom: 1.25rem;
   }
   
   .signin-form {
@@ -34,20 +36,20 @@ body {
   }
   
   .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
     width: 100%;
   }
   
   .form-label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.625rem;
     color: #4a5568;
     width: 100%;
   }
   
   .form-input {
     width: 100%;
-    padding: 0.75rem;
+    padding: 1rem;
     border: 1px solid #e2e8f0;
     border-radius: 0.25rem;
     font-size: 1rem;
@@ -61,12 +63,12 @@ body {
   }
   
   .form-button {
-    padding: 0.75rem 1.5rem;
+    padding: 0.875rem 1.75rem;
     border: none;
     border-radius: 0.25rem;
     font-size: 1rem;
     cursor: pointer;
-    margin-left: 0.5rem;
+    margin-left: 0.625rem;
   }
   
   .submit-button {
