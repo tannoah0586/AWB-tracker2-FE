@@ -1,6 +1,6 @@
 main {
     font-family: sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
   }
   
   section.bg-blue-100 {
@@ -9,7 +9,7 @@ main {
     padding-bottom: 5rem;
     text-align: center;
     width: 100%;
-    box-sizing: border-box; /* Include padding in width calculation */
+    box-sizing: border-box;
   }
   
   section.bg-blue-100 div.max-w-4xl {
