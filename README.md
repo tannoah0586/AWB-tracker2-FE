@@ -1,75 +1,85 @@
-## Core Functionality (Backend API Alignment)
+# AWB Tracker 2 - Frontend MVP
 
-* **Simulated OTM Data (MongoDB):**
-    * The backend provides API endpoints (`/awbs`) to retrieve and filter AWB data stored in a MongoDB database.
-    * Data includes fields such as `Transport Mode`, `Direction`, `ETD Date`, `ETA Date`, `HAWB/HBL`, and `Proof Of Delivery (POD)`.
+## Background
 
-* **User Authentication and Authorization:**
-    * Backend API endpoints (`/auth/sign-up`, `/auth/sign-in`, `/users`) handle user registration, login, and profile management with JWT authentication.
-    * Protected routes are implemented to secure sensitive data.
+AWB (Air Waybill) tracking is crucial for logistics and supply chain management. Users often need a centralized platform to monitor their shipments' status efficiently. This project aims to provide a user-friendly web interface for tracking and managing AWBs.
 
-* **Saved AWB Management:**
-    * Users can save and manage their assigned AWBs via the backend's `/savedawbs` endpoints.
-    * Functionality includes saving new AWBs and updating existing saved AWBs.
+## Project Brief
 
-* **Automated Email Notifications:**
-    * The backend's `/email/saved-awbs` endpoint triggers automated email notifications based on saved AWBs, using Nodemailer and a cron job.
+Develop a React-based frontend application that allows users to:
 
-* **Dashboard and Filtering:**
-    * The frontend will display a dashboard with a list of AWBs fetched from the backend, including filtering options.
-    * Pagination will be implemented to handle large datasets.
-    * Detailed AWB information will be displayed.
+* Authenticate securely.
+* Save and manage a list of AWBs.
+* View real-time shipment status updates.
+* Receive visual cues for at-risk shipments (e.g., empty POD status).
+* Search for AWBs using provided filters.
 
-## Frontend Components
+## Wireframes (Conceptual)
 
-* **Landing Page (`Landing.js`):**
-    * Displays an overview of the application and provides login/signup options.
+* **Login/Signup Page:** Simple form for user authentication.
+* **Dashboard:**
+    * Displays a list of saved AWBs with key information (HAWB/HBL, status, etc.).
+    * Visual indicators for at-risk shipments.
+    * Search/filter bar.
+    * "Add AWB" button.
+* **AWB Details Page:**
+    * Displays detailed shipment information.
+    * Status history.
 
-* **Navigation Bar (`NavBar.js`):**
-    * Provides navigation to different parts of the application and manages user authentication state.
+## User Stories (MVP)
 
-* **Authentication Components:**
-    * `Login.js`: Handles user login.
-    * `Signup.js`: Handles user registration.
-    * `ProtectedRoute.js`: Wraps routes requiring authentication.
+* **Authentication:**
+    * As a user, I want to create an account so I can save my AWBs.
+    * As a user, I want to log in so I can access my saved AWBs.
+* **AWB Management:**
+    * As a user, I want to save an AWB to my tracking list.
+    * As a user, I want to view a list of my saved AWBs.
+    * As a user, I want to delete AWBs from my list.
+    * As a user, I want to edit the saved AWBs.
+* **Status Tracking:**
+    * As a user, I want to see the real-time status of my saved AWBs.
+    * As a user, I want to easily identify AWBs with potential issues (e.g., empty POD).
+* **Search/Filtering:**
+    * As a user I want to be able to search for AWBs using specific parameters.
 
-* **Dashboard (`Dashboard.js`):**
-    * Displays the list of AWBs with filtering and pagination.
+## Technologies Used
 
-* **AWB Details (`AWBDetails.js` or `AWBCard.js`):**
-    * Displays detailed information about a selected AWB.
+* **Frontend:**
+    * React.js: For building the user interface.
+    * Build in fetch: For making fetch API requests to the backend.
+    * React Router: For client side routing.
+    * CSS/Styled-components/Material UI: For styling.
+* **API Communication:**
+    * JSON over HTTP.
 
-* **Lane Management (`LaneManagement.js`):**  
-    * Allows users to save and manage their assigned AWBs.
+## Models (Data Structures)
 
-* **User Profile/Settings (`UserProfile.js` or `UserSettings.js`):**
-    * Manages user notification preferences and displays user information.
+* **User:**
+    * `username` (string)
+    * `email` (string)
+    * `token` (string, after login)
+* **SavedAWB:**
+    * `_id` (string)
+    * `awbId` (string, reference to FreightData)
+* **FreightData:**
+    * `HAWB/HBL` (string)
+    * `Departure Port` (string)
+    * `Destination Port` (string)
+    * `Proof Of Delivery (POD)` (string)
+    * ... (other relevant shipment data) - see github for more
 
-* **Error Handling/Alerts (`ErrorAlert.js` or `Alert.js`):**
-    * Displays error messages and success notifications.
+## MVP Scope
 
-## Frontend Considerations
+* Basic user authentication (signup/login).
+* Display of saved AWBs with essential information.
+* Visual indicators for at-risk shipments.
+* Basic search functionality.
+* Ability to add, delete, and edit saved AWBs.
+* Display of detailed shipment information.
+* No advanced UI/UX features (maps, charts).
+* No real time updates, using polling.
 
-* **API Service (`apiService.js` or `api.js`):**
-    * A dedicated service to handle all API calls to the backend.
+## Reflections
 
-* **State Management:**
-    * Implementation of Context API or React Hooks for managing application-wide state.
-
-* **UI Library:**
-    * Choice between Material-UI or Tailwind CSS for consistent styling.
-
-* **Routing:**
-    * `react-router-dom` for managing navigation.
-
-* **Form Handling:**
-    * `React Hook Form` for simplifying form management.
-
-* **Authentication Flow:**
-    * Proper implementation of login, signup, logout, and token management.
-
-* **Loading States:**
-    * Visual indicators during API calls.
-
-* **Form Validation:**
-    * Input validation for forms.
+Pros - implemented a full Mern Stack 
+Cons - time mgmt 
