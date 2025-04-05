@@ -13,7 +13,7 @@
     left: 0;
     width: 100%;
     background-color: #fce4ec;
-    z-index: 1; /* Title on top */
+    z-index: 1; 
     padding-top: 1rem;
     padding-bottom: 1rem;
     box-sizing: border-box;
@@ -47,7 +47,7 @@
     z-index: 10; 
     padding: 1rem 2rem;
     box-sizing: border-box;
-    min-height: 70px; /* Add minimum height for filters */
+    min-height: 70px; 
 }
 
 .dashboard-select {
@@ -89,16 +89,16 @@
 .dashboard-pagination {
     display: flex;
     justify-content: center;
-    position: fixed; /* Lock it to the viewport */
-    bottom: 1rem; /* Adjust vertical position */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust horizontal centering */
-    width: 60%; /* Adjust width */
-    margin: 0; /* Remove default margins */
-    padding: 0.5rem 0; /* Add padding for spacing */
-    background-color: #f5f0ff; /* Add background color */
-    border-top: 1px solid #eee; /* Add a border for separation */
-    box-sizing: border-box; /* Include padding in width calculation */
+    position: fixed; 
+    bottom: 1rem;  
+    left: 50%;  
+    transform: translateX(-50%); 
+    width: 60%;  
+    margin: 0;  
+    padding: 0.5rem 0;  
+    background-color: #f5f0ff;  
+    border-top: 1px solid #eee;  
+    box-sizing: border-box;  
 }
 
 .dashboard-button {

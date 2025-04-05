@@ -1,7 +1,7 @@
 .shortlisted-awbs-container {
     font-family: sans-serif;
     padding: 2rem;
-    max-width: 1500px; /* Increase max-width */
+    max-width: 1500px;  
     margin: 2rem auto;
     margin-left: 500px;
     background-color: #fff0f5;
@@ -27,15 +27,15 @@
     align-items: center;
     padding: 1rem;
     border-bottom: 1px solid #eee;
-    flex-wrap: wrap; /* Allow items to wrap */
+    flex-wrap: wrap;  
 }
 
 .shortlisted-awbs-link {
     color: #007bff;
     text-decoration: none;
     font-weight: 500;
-    width: 70%; /* Adjust link width */
-    word-break: break-word; /* Prevent long words from breaking layout */
+    width: 70%;  
+    word-break: break-word;  
 }
 
 .shortlisted-awbs-link:hover {
@@ -50,7 +50,7 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem;
-    margin-top: 0.5rem; /* Add margin for spacing */
+    margin-top: 0.5rem;  
 }
 
 .shortlisted-awbs-remove-button:hover {

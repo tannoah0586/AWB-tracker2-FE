@@ -1,8 +1,8 @@
 .awb-detail-container {
     font-family: sans-serif;
     padding: 2rem;
-    max-width: 800px; /* Set a maximum width */
-    margin: 5rem auto; /* Center horizontally */
+    max-width: 800px; 
+    margin: 5rem auto;
     margin-left: 25rem ;
     background-color: #f9f9f9;
     border-radius: 8px;
