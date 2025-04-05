@@ -48,7 +48,7 @@ Develop a React-based frontend application that allows users to:
     * React.js: For building the user interface.
     * Build in fetch: For making fetch API requests to the backend.
     * React Router: For client side routing.
-    * CSS/Styled-components/Material UI: For styling.
+    * CSS/Styled-components: For styling.
 * **API Communication:**
     * JSON over HTTP.
 
