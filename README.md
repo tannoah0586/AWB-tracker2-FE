@@ -1,5 +1,8 @@
 # AWB Tracker 2 - Frontend MVP
 
+## Live Site
+https://awb-tracker2.vercel.app/ 
+
 ## Background
 
 AWB (Air Waybill) tracking is crucial for logistics and supply chain management. Users often need a centralized platform to monitor their shipments' status efficiently. This project aims to provide a user-friendly web interface for tracking and managing AWBs.
